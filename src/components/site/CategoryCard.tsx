@@ -11,7 +11,11 @@ export function CategoryCard({ eco, index = 0 }: { eco: Ecosystem; index?: numbe
   return (
     <Reveal as="article" className={`category-card eco-${eco.key}`} delay={index * 80}>
       <div className="category-visual" aria-hidden="true">
-        <ProgramMotif kind={eco.key} variant={index} />
+        {eco.image ? (
+          <img src={eco.image} alt="" className="card-image" />
+        ) : (
+          <ProgramMotif kind={eco.key} variant={index} />
+        )}
         <span className="card-icon"><Icon size={28} strokeWidth={1.7} /></span>
       </div>
       <div className="category-body">

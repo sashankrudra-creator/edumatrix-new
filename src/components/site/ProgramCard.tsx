@@ -11,7 +11,11 @@ export function ProgramCard({ program, index = 0 }: { program: Program; index?: 
   return (
     <Reveal as="article" className={`program-card eco-${eco.key} variant-${index % 3}`} delay={(index % 3) * 70}>
       <div className="card-visual" aria-hidden="true">
-        <ProgramMotif kind={eco.key} variant={index} />
+        {program.image ? (
+          <img src={program.image} alt="" className="card-image" />
+        ) : (
+          <ProgramMotif kind={eco.key} variant={index} />
+        )}
         <span className="card-icon"><Icon size={26} strokeWidth={1.8} /></span>
         <span className="card-badge">{eco.title}</span>
       </div>

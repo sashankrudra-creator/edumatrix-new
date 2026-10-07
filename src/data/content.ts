@@ -13,6 +13,7 @@ export type EcosystemKey = 'stem' | 'academic' | 'skills' | 'institutional';
 
 export type Ecosystem = {
   key: EcosystemKey;
+  image?: string;
   title: string;
   label: string;
   tagline: string;
@@ -27,24 +28,28 @@ export const ecosystems: Ecosystem[] = [
     key: 'stem', title: 'STEM & Innovation', label: 'Explore · Experiment · Create',
     tagline: 'Robotics, AI, flight, space science and making — learned by building and testing.',
     href: '/stem-innovation', cta: 'Discover STEM', categories: ['STEM & Innovation'], icon: Atom,
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800'
   },
   {
     key: 'academic', title: 'Academic Excellence', label: 'Concepts · Practice · Progress',
     tagline: 'Concept-led learning, test practice and assessment across core subjects and competitive preparation.',
     href: '/academics-testing', cta: 'Explore Academics',
     categories: ['Academics & Testing', 'Academic Mastery', 'Academic & Competitive'], icon: GraduationCap,
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800'
   },
   {
     key: 'skills', title: 'Skills & Personal Development', label: 'Communicate · Calculate · Grow',
     tagline: 'Language, mental mathematics and student-centred support that build confidence.',
     href: '/programs#skills', cta: 'See skill programs',
     categories: ['Language Development', 'Academic Skills', 'Student Development'], icon: MessageSquare,
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800'
   },
   {
     key: 'institutional', title: 'Institutional Solutions', label: 'Schools & institutions',
     tagline: 'School ERP, teacher support, smart classrooms, branding and science events.',
     href: '/institutional-b2b', cta: 'For Institutions',
     categories: ['Institutional Solutions'], icon: School,
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
   },
 ];
 

@@ -16,11 +16,13 @@ export function CategoryCard({ eco, index = 0 }: { eco: Ecosystem; index?: numbe
         ) : (
           <ProgramMotif kind={eco.key} variant={index} />
         )}
-        <span className="card-icon"><Icon size={28} strokeWidth={1.7} /></span>
       </div>
       <div className="category-body">
         <span className="category-label">{eco.label}</span>
-        <h3>{eco.title}</h3>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
+          <h3 style={{ margin: '6px 0 8px' }}>{eco.title}</h3>
+          <span style={{ color: 'var(--accent-ink)', flex: 'none', background: 'var(--tint)', padding: '6px', borderRadius: '8px', marginTop: '4px' }}><Icon size={20} strokeWidth={2} /></span>
+        </div>
         <p>{eco.tagline}</p>
         <ul className="category-list" aria-label={`${eco.title} programs`}>
           {shown.map(p => <li key={p.slug}>{p.title}</li>)}

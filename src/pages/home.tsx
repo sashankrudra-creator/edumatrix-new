@@ -69,7 +69,7 @@ export function HomePage() {
             <SectionHeader id="featured-title" label="Practical by design" title="Curiosity deserves a place to build."
               copy="From the first question to a working project, students learn through guided exploration, practice and making." />
             <ProgramGrid items={featured} />
-            <div className="center-link"><Link href="/stem-innovation" className="text-link">Explore STEM & Innovation <ArrowRight size={15} /></Link></div>
+            <div className="center-link"><Link href="/stem-innovation" className="button button-outline" style={{ display: 'inline-flex', padding: '10px 18px', fontSize: '14px' }}>Explore STEM & Innovation <ArrowRight size={15} /></Link></div>
           </div>
         </section>
 

@@ -16,12 +16,13 @@ export function ProgramCard({ program, index = 0 }: { program: Program; index?: 
         ) : (
           <ProgramMotif kind={eco.key} variant={index} />
         )}
-        <span className="card-icon"><Icon size={26} strokeWidth={1.8} /></span>
-        <span className="card-badge">{eco.title}</span>
       </div>
       <div className="card-body">
         <span className="card-category">{program.category}</span>
-        <h3>{program.title}</h3>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
+          <h3 style={{ margin: '6px 0 8px' }}>{program.title}</h3>
+          <span style={{ color: 'var(--accent-ink)', flex: 'none', background: 'var(--tint)', padding: '6px', borderRadius: '8px', marginTop: '4px' }}><Icon size={20} strokeWidth={2} /></span>
+        </div>
         <p>{program.description}</p>
         <div className="skill-line">
           <span className="skill-line-label">Skills</span>

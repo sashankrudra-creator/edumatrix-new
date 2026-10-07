@@ -182,6 +182,10 @@ h2 { font:650 clamp(30px,3.7vw,46px)/1.16 var(--app-font-serif); color:var(--bra
 .cta-band .button-outline:hover { color:var(--brand-dark); background:#fff; border-color:#fff; }
 .page-hero { background:var(--light-violet); padding:82px 0 76px; position:relative; overflow:hidden; }
 .page-hero::after { content:""; position:absolute; width:340px;height:340px;right:-95px;top:-190px;border:1px solid #e4d5e9;border-radius:50%;box-shadow:0 0 0 50px rgba(52,21,57,.02),0 0 0 100px rgba(52,21,57,.02); }
+.page-hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; position: relative; z-index: 1; }
+.page-hero-inner > div:first-child { flex: 1; }
+.page-hero-image-wrap { flex: 0.85; position: relative; display: flex; justify-content: flex-end; }
+.page-hero-image { width: 100%; max-width: 480px; border-radius: 14px; box-shadow: 0 16px 40px rgba(0,0,0,0.15); object-fit: cover; aspect-ratio: 4/3; }
 .page-hero h1 { position:relative; z-index:1; font:700 clamp(38px,5vw,60px)/1.08 var(--app-font-serif); letter-spacing:-.05em; color:var(--brand-violet); max-width:800px; margin:16px 0; }
 .page-hero p { position:relative; z-index:1; color:var(--muted-text); line-height:1.7; max-width:680px; font-size:16px; }
 .page-hero .eyebrow { color:var(--brand-cyan-ink); }

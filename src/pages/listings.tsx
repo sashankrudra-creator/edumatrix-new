@@ -13,9 +13,9 @@ import { AcademicPath } from '@/components/site/AcademicPath';
 import { InstitutionAreas } from '@/components/site/InstitutionAreas';
 import { Wave } from '@/components/site/Wave';
 
-function ListingPage({ title, label, description, filter, intro, eco, before, after, gridHeading, showCta = true }: {
+function ListingPage({ title, label, description, filter, intro, eco, before, after, gridHeading, showCta = true, image }: {
   title: string; label: string; description: string; filter: (p: Program) => boolean; intro?: string;
-  eco: EcosystemKey; before?: ReactNode; after?: ReactNode; gridHeading?: { label: string; title: string }; showCta?: boolean;
+  eco: EcosystemKey; before?: ReactNode; after?: ReactNode; gridHeading?: { label: string; title: string }; showCta?: boolean; image?: string;
 }) {
   const filtered = programs.filter(filter);
   const Icon = ecosystems.find(e => e.key === eco)!.icon;
@@ -23,7 +23,7 @@ function ListingPage({ title, label, description, filter, intro, eco, before, af
     <>
       <PageMeta title={title} description={description} />
       <main>
-        <PageHero label={label} title={title} eco={eco} icon={Icon}>{description}</PageHero>
+        <PageHero label={label} title={title} eco={eco} icon={Icon} image={image}>{description}</PageHero>
         {before}
         <section className="section" aria-label={`${title} programs`}>
           <div className="container">
@@ -43,7 +43,7 @@ function ListingPage({ title, label, description, filter, intro, eco, before, af
 export function StemPage() {
   return (
     <ListingPage eco="stem" title="STEM & Innovation" label="Practical learning for a changing world"
-      description="Building future-ready skills through practical learning."
+      description="Building future-ready skills through practical learning." image="/images/hero-stem.jpg"
       intro="Students investigate ideas by building, testing and reflecting. Explore robotics, aerospace, AI, immersive technologies, space science and enterprise through projects, experiments and guided sessions."
       gridHeading={{ label: 'All STEM programs', title: 'Pick a path and start building.' }}
       filter={p => p.category === 'STEM & Innovation'}
@@ -55,7 +55,7 @@ export function StemPage() {
 export function AcademicsPage() {
   return (
     <ListingPage eco="academic" title="Academic Excellence & Assessment" label="Concepts, practice, progress"
-      description="Academic foundations and thoughtful assessment for stronger understanding."
+      description="Academic foundations and thoughtful assessment for stronger understanding." image="/images/hero-academic.jpg"
       intro="From personalized IIT-JEE and medical preparation to core subjects and assessment, Edumatrix combines concept focus, practice and continued learning support."
       gridHeading={{ label: 'All academic programs', title: 'Subjects, preparation and assessment.' }}
       filter={p => ['Academics & Testing', 'Academic Mastery', 'Academic & Competitive'].includes(p.category)}
@@ -67,7 +67,7 @@ export function InstitutionalPage() {
   return (
     <>
       <ListingPage eco="institutional" title="Solutions for Schools & Educational Institutions" label="Institutional B2B"
-        description="Programs, technology and operational support shaped around school needs."
+        description="Programs, technology and operational support shaped around school needs." image="/images/hero-institutional.jpg"
         intro="Partnering with schools means listening first. Edumatrix supports curriculum-aligned programs, activity-based workshops, teacher development, administration and practical learning."
         gridHeading={{ label: 'Institutional programs', title: 'Services designed around the school.' }}
         filter={p => p.category === 'Institutional Solutions'} showCta={false}

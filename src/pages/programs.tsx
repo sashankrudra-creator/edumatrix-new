@@ -12,7 +12,7 @@ export function ProgramsPage() {
     <>
       <PageMeta title="Programs" description="Explore Edumatrix programs across STEM, academics, languages, student development and institutional solutions." />
       <main>
-        <PageHero label="Learning ecosystem" title="Programs for understanding, doing and growing.">
+        <PageHero label="Learning ecosystem" title="Programs for understanding, doing and growing." image="/images/hero-programs.jpg">
           Explore Edumatrix programs across academic mastery, practical STEM, language development, student support and school services.
         </PageHero>
 

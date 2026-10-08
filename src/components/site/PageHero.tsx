@@ -4,11 +4,11 @@ import type { EcosystemKey } from '@/data/content';
 import { ProgramMotif } from './ProgramMotif';
 import { Eyebrow } from './SectionHeader';
 
-export function PageHero({ label, title, children, eco, icon: Icon, actions, image }: {
-  label: string; title: string; children?: ReactNode; eco?: EcosystemKey; icon?: LucideIcon; actions?: ReactNode; image?: string;
+export function PageHero({ label, title, children, eco, icon: Icon, actions, image, dark }: {
+  label: string; title: string; children?: ReactNode; eco?: EcosystemKey; icon?: LucideIcon; actions?: ReactNode; image?: string; dark?: boolean;
 }) {
   return (
-    <section className={`page-hero ${eco ? `eco-${eco}` : ''}`}>
+    <section className={`page-hero ${eco ? `eco-${eco}` : ''} ${dark ? 'page-hero-dark' : ''}`}>
       {eco && !image && <div className="page-hero-art" aria-hidden="true"><ProgramMotif kind={eco} /></div>}
       <div className="container page-hero-inner">
         <div>

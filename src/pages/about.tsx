@@ -20,9 +20,10 @@ export function AboutPage() {
     <>
       <PageMeta title="About Edumatrix" description="Learn how Edumatrix combines academic, professional, technical, linguistic and life skills." />
       <main>
-        <PageHero label="Who we are" title="Learning that connects understanding with possibility." icon={GraduationCap} eco="skills" image="/images/hero-about.jpg">
+        <PageHero label="Who we are" title="Learning that connects understanding with possibility." icon={GraduationCap} eco="skills" image="/images/hero-about.jpg" dark={true}>
           Edumatrix is an education and skill-development organization focused on bringing academic learning together with practical, future-oriented education.
         </PageHero>
+        <Wave from="navy" to="white" />
 
         <section className="section" aria-labelledby="exp-title">
           <div className="container intro-grid">
